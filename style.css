@@ -27,7 +27,7 @@ nav {
   font-size: 30px;
 }
 
-form {
+nav > form {
   width: 100%;
   display: flex;
   flex-direction: column;
