@@ -11,19 +11,72 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="workers.css">
+        <link rel="stylesheet" href="dayOff.css">
     </head>
     <body>
+        <div class="container">
+
+<!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    NAVIGATION / LEFTBAR-->
+        <nav>
+            <div class="logo">SzWORK</div>
+
+            <form>
+                <label for="month">Wybierz Miesiąc</label>
+                <input type="month" id="month">
+            </form>
+
+            <button>OK</button>
+
+           <ul>
+             <li><button class='workers-btn'>Pracownicy</button></li>
+             <li><button class='dayOff-btn'>Dni Wolne</button></li>
+           </ul>
+
+        </nav>
+
+<!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    WORKERS TAB-->
+         <div class='workers-tab'>
+            <div class='workers-tab-topBar'>
+                <h4>PRACOWNICY</h4>
+                <button class='workers-tab-close'>X</button>
+            </div>
+            <div class='workers-tab-content'>
+                
+
+                <form>
+                    <input type="text" id="name" placeholder="Imię">
+                    <input type="text" id="surname" placeholder="Nazwisko">
+                    <input type="text" id="role" placeholder="Funkcja">
+                    <input type="text" id="add-info" placeholder="Dodatkowe informacje">
+                    <button type="button" id='add-worker-btn'>DODAJ</button>
+                </form>
+
+
+
+            </div>
+        </div>
+
+<!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    DAYS OFF TAB-->
+
+        <div class='dayOff-tab'>
+            <div class='dayOff-tab-topBar'>
+                <h4>DNI WOLNE</h4>
+                <button class='dayOff-tab-close'>X</button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
         
-
-
-
-
-
-
-
-
-
-        
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
