@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="workers.css">
         <link rel="stylesheet" href="dayOff.css">
+        <link rel="stylesheet" href="shedule.css">
     </head>
     <body>
         <div class="container">
@@ -28,34 +29,43 @@
 
             <button>OK</button>
 
-           <ul>
-             <li><button class='workers-btn'>Pracownicy</button></li>
-             <li><button class='dayOff-btn'>Dni Wolne</button></li>
-           </ul>
+            <button class='workers-btn'>Pracownicy</button>
+            
+            <button class='dayOff-btn'>Dni Wolne</button>
+           
 
         </nav>
+<!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    SHEDULE AREA-->
+    <div class="shedule">
+        <div class="date-shedule">
+            <div class="date"></div>
+            <div class="day"></div>
+        </div>
+        <div class="workers-shedule">
+        </div>
+        <div class="work-shedule"></div>
+    </div>
 
 <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    WORKERS TAB-->
-         <div class='workers-tab'>
+         <d class='workers-tab'>
             <div class='workers-tab-topBar'>
                 <h4>PRACOWNICY</h4>
                 <button class='workers-tab-close'>X</button>
             </div>
             <div class='workers-tab-content'>
-                
 
                 <form>
-                    <input type="text" id="name" placeholder="Imię">
-                    <input type="text" id="surname" placeholder="Nazwisko">
-                    <input type="text" id="role" placeholder="Funkcja">
+                    <input  type="text" id="name" placeholder="Imię">
+                    <input  type="text" id="surname" placeholder="Nazwisko">
+                    <input  type="text" id="role" placeholder="Funkcja">
                     <input type="text" id="add-info" placeholder="Dodatkowe informacje">
                     <button type="button" id='add-worker-btn'>DODAJ</button>
                 </form>
+                <div class="worker-list">
 
-
-
+                </div>
             </div>
-        </div>
+        </>
 
 <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    DAYS OFF TAB-->
 
@@ -65,13 +75,6 @@
                 <button class='dayOff-tab-close'>X</button>
             </div>
         </div>
-
-
-
-
-
-
-
 
 
     </div>

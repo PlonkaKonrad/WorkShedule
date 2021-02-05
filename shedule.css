@@ -1,0 +1,56 @@
+.shedule {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+  width: 1200px;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.workers-shedule {
+  position: absolute;
+  height: 1000px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 15%;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: left top;
+  transform: rotate(-90deg) translate(-400px, 20px);
+}
+
+.date-shedule {
+  position: absolute;
+  height: calc(100% - 200px);
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.6);
+  left: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.date-shedule > .date {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+.date-shedule > .day {
+  display: block;
+  width: 50%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.workers-shedule-worker {
+  width: 100%;
+  height: 30px;
+  background-color: seashell;
+  box-sizing: border-box;
+  border: 1px solid black;
+}

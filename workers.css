@@ -10,6 +10,7 @@
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
+  z-index: 100;
 }
 
 .workers-tab-active {
@@ -62,4 +63,37 @@
 
 .workers-tab-content > form > input {
   height: 50%;
+}
+
+.workers-tab-content > form > button {
+  background-color: green;
+}
+
+.worker-list {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 80px);
+  margin-top: 80px;
+  overflow-y: scroll;
+}
+
+.worker-position {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+.worker-position > div {
+  height: 100%;
+  width: 20%;
+  padding: 10px 10px;
+  border-right: 2px solid black;
+}
+
+.worker-position > button {
+  background-color: crimson;
 }

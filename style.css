@@ -3,7 +3,7 @@ body {
   font-family: arial;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -27,16 +27,19 @@ nav {
   font-size: 30px;
 }
 
-nav > ul > li {
+form {
+  width: 100%;
   display: flex;
-  list-style: none;
-  padding: 0;
-  font-size: 20px;
-  font-family: Arial;
+  flex-direction: column;
+  align-items: center;
 }
 
-button {
+form > input {
+  width: 80%;
+}
+nav > button {
   display: block;
   width: 130px;
   padding: 10px 20px;
+  margin: 10px 0;
 }
