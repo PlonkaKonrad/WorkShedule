@@ -8,20 +8,24 @@ $('.workers-btn').click(() => {
 
         let workerTab = $('.workers-tab');
         let dayTab = $('.dayOff-tab').hasClass('dayOff-tab-active');
+        
 
 
 
         if (dayTab == true) {
             $('.dayOff-tab').toggleClass("dayOff-tab-active");
             workerTab.toggleClass("workers-tab-active");
+
         } else {
             workerTab.toggleClass("workers-tab-active");
+            $('.blackOut').toggleClass('blackout-active');
         }
     });
 
 
 $('.workers-tab-close').click(function(){
     $('.workers-tab').toggleClass("workers-tab-active");
+    $('.blackOut').toggleClass('blackout-active');
 });
 
 
@@ -65,22 +69,7 @@ function displayWorker() {
 
 
     }
-
-
-
-
-
-
-    //  for( let i = 0; i < workersArray.length -1 ; i++){
-    //      console.log(i);
-    //      let workerName = workersArray[i][0];
-    //      let workerSurname = workersArray[i][1];
-
-    //     alert(workersArray[i][1]);
-    //     // $('.workers-shedule').append("<div class='workers-shedule-worker'>"+workerName+' '+workerSurname+"</div>");
-       
-    // }
-}
+};
 
 
 function addWorker(worker){

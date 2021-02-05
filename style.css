@@ -11,6 +11,18 @@ body {
   height: 100%;
   background-image: url(images/cork-board.png);
 }
+
+.blackOut {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  left: 200%;
+}
+.blackout-active {
+  left: 0;
+}
 /* ////////////////////////////////////////////////////////////////////////////////////// NAV STYLES */
 nav {
   position: absolute;
