@@ -79,25 +79,14 @@ $('.blackOut').click(() => {
 );
 
 
-// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DAY OFF BUTTON 
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DAY OFF TAB
 
-// $('.dayOff-btn').click(() => {
 
-//         let workerTab = $('.workers-tab').hasClass('workers-tab-active');
-//         let dayTab = $('.dayOff-tab');
 
-//         if (workerTab == true) {
-//             $('.workers-tab').toggleClass("workers-tab-active");
-//             dayTab.toggleClass("dayOff-tab-active");
-//         } else {
-//             dayTab.toggleClass("dayOff-tab-active");
-//         }
 
-//     });
 
-// $('.dayOff-tab-close').click(function(){
-//     $('.dayOff-tab').toggleClass("dayOff-tab-active");
-// });
+
+
 
 
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo ADD WORKER 
@@ -110,14 +99,17 @@ function displayWorker() {
     $('.workers-shedule').empty();
 
     for( let i = 0 ; i < workersArray.length; i++){ 
+        
 
 
         let workerName = workersArray[i][0];
         let workerSurname = workersArray[i][1];
+        let bgcolor = workersArray[i][4];
+        let colorString="style='background-color:"+ bgcolor +";'";
 
-        $('.workers-shedule').append("<div class='workers-shedule-worker'>"+workerName+' '+workerSurname+"</div>");
+        $('.workers-shedule').append("<div "+colorString+" class='workers-shedule-worker'>"+workerName+' '+workerSurname+"</div>");
 
-
+    
     }
 };
 
@@ -133,11 +125,12 @@ function addWorker(worker){
     let surname = $('#surname').val();
     let role = $('#role').val();
     let addInfo = $('#add-info').val();
-    let worker = [name, surname, role, addInfo];
+    let color = $('#worker-color').val();
+    let worker = [name, surname, role, addInfo, color];
+    let colorString = "style='background-color:"+ color +";'";
 
 
-
-    $('.worker-list').append("<div class='worker-position'><div>"+name+"</div><div>"+surname+"</div><div>"+role+"</div><div>"+addInfo+"</div><button>Usuń</button></div>");
+    $('.worker-list').append("<div "+colorString+" class='worker-position'><div>"+name+"</div><div>"+surname+"</div><div>"+role+"</div><div>"+addInfo+"</div><button>Usuń</button></div>");
 
 
 
@@ -174,7 +167,7 @@ function CreatePDFfromHTML() {
         }
         pdf.save("shedule.pdf");
     });
-}l
+}
   
 
 

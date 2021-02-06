@@ -32,7 +32,7 @@
   border: none;
 }
 .workers-tab-topBar {
-  background-color: aqua;
+  background-color: greenyellow;
   position: absolute;
   display: flex;
   align-items: center;
@@ -62,6 +62,10 @@
 
 .workers-tab-content > form > input {
   height: 50%;
+}
+
+#worker-color {
+  width: 200px;
 }
 
 .workers-tab-content > form > button {
