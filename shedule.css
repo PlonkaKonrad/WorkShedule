@@ -4,7 +4,7 @@
   top: 50%;
   transform: translate(-40%, -50%);
   width: 1200px;
-  height: 800px;
+  height: 820px;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -19,7 +19,7 @@
   flex-direction: column;
   align-items: center;
   transform-origin: left top;
-  transform: rotate(-90deg) translate(-400px, 20px);
+  transform: rotate(-90deg) translate(-380px, 20px);
 }
 
 .date-shedule {
@@ -34,17 +34,36 @@
 
 .date-shedule > .date {
   display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid white;
 }
+.date-shedule > .date > .date-disp {
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.day-disp {
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
 .date-shedule > .day {
   display: block;
   width: 50%;
   height: 100%;
   box-sizing: border-box;
-  border: 1px solid white;
 }
 
 .workers-shedule-worker {

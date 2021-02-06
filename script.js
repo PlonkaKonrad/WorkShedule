@@ -1,7 +1,51 @@
 
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DATE DISPLAY
 
 
-// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORKERS BUTTON 
+ $('#date-btn').click(() =>{
+
+
+    let input =$('#month').val();
+    let inputDate = new Date(input);
+    let month = inputDate.getMonth() +1;
+    let year = input.charAt(2) + input.charAt(3);
+    let day = inputDate.getDay();
+    let days = ["Niedziela", "Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota"];
+
+
+    function daysInMonth (month, year) {
+        return new Date(year, month, 0).getDate();
+    }
+    let monthLength = daysInMonth(month,year);
+   
+
+    $('.date').empty();
+    $('.day').empty();
+     
+
+    for(let i = 1 ; i  < monthLength +1 ; i++){
+        $('.date').append("<div class='date-disp'>"+ i +'-'+month+'-'+ year +"</div>");
+
+
+
+        $('.day').append("<div class='day-disp'>" +days[day] +"</div>");
+        
+         day++;
+
+        if(day > 6){
+            day =0;
+         };
+
+
+    };
+    
+ })
+
+
+
+
+
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORKERS TAB
 
 $('.workers-btn').click(() => {
 
@@ -23,10 +67,16 @@ $('.workers-btn').click(() => {
     });
 
 
-$('.workers-tab-close').click(function(){
-    $('.workers-tab').toggleClass("workers-tab-active");
+$('.workers-tab-close').click(() => {
+        $('.workers-tab').toggleClass("workers-tab-active");
+        $('.blackOut').toggleClass('blackout-active');
+    });
+
+$('.blackOut').click(() => {
     $('.blackOut').toggleClass('blackout-active');
-});
+    $('.workers-tab').toggleClass("workers-tab-active");
+    }
+);
 
 
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DAY OFF BUTTON 
