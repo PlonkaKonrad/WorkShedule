@@ -6,7 +6,6 @@
   left: 200%;
   border: 2px solid black;
   transform: translate(-50%, -50%);
-  transition: 1s;
   border-radius: 10px;
   overflow: hidden;
   background-color: #fff;
