@@ -1,4 +1,5 @@
 
+
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DATE DISPLAY
 
 
@@ -38,7 +39,7 @@
 
 
     };
-    
+    displayCells(monthLength);
  })
 
 
@@ -78,17 +79,6 @@ $('.blackOut').click(() => {
     }
 );
 
-
-// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DAY OFF TAB
-
-
-
-
-
-
-
-
-
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo ADD WORKER 
 
 
@@ -111,6 +101,9 @@ function displayWorker() {
 
     
     }
+
+    $('.workersAmount-p').text(workersArray.length);
+    
 };
 
 
@@ -169,5 +162,53 @@ function CreatePDFfromHTML() {
     });
 }
   
+
+
+
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORK SHEDULE
+
+
+// <!-- row container musi być szeroki na szerokość pracowników i do niego appendować divy cell(ilość pracowników)
+//                 i tak dla każdego dnia. musi być pętla w pętli gdzie pierwsza dodaje row conatiner dla każdego dnia a pętyla wewnątrz
+//                 niej rysuje tyle divów cell ile jest pracowników
+            
+//             -->
+//             <div class="row-container">
+//                 <div class='cell'></div>
+//             </div>
+//             <div class="row-container">
+//                 <div class='cell'></div>
+//             </div>
+
+
+function displayCells(monthLength){
+
+
+    $('.work-shedule').empty();
+
+    for(let i = 0; i < monthLength; i++){
+        
+        $('.work-shedule').append("<div id='n"+i+"' class='row-container'></div>");
+
+        let id = '#n' + i ;
+
+          
+//console.log(id);
+//console.log(workersArray.length);
+
+
+         for(let j = 0; j < workersArray.length; j++){
+         $(id).append("<div class='cell'></div>");
+
+         
+        
+
+         }
+     }
+
+       
+       
+                   
+}
 
 

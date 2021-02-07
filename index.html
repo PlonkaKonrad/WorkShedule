@@ -26,6 +26,8 @@
             </form>
 
             <button id='date-btn' type='button'>OK</button>
+
+            <button id='generate' type='button'>GENERUJ</button>
             
             <button class='workers-btn'>Pracownicy</button>
             <button class='dayOff-btn'>Dni Wolne</button>
@@ -35,13 +37,30 @@
         </nav>
 <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    SHEDULE AREA-->
     <div class="shedule">
+        <div class='workersAmount'>Ilość pracowników:<p class='workersAmount-p'></p></div>
         <div class="date-shedule">
             <div class="date"></div>
             <div class="day"></div>
         </div>
         <div class="workers-shedule">
         </div>
-        <div class="work-shedule"></div>
+        <div class="work-shedule">
+
+
+            <!-- row container musi być szeroki na szerokość pracowników i do niego appendować divy cell(ilość pracowników)
+                i tak dla każdego dnia. musi być pętla w pętli gdzie pierwsza dodaje row conatiner dla każdego dnia a pętyla wewnątrz
+                niej rysuje tyle divów cell ile jest pracowników
+            
+            -->
+            <!-- <div class="row-container">
+                <div class='cell'></div>
+            </div>
+            <div class="row-container">
+                <div class='cell'></div>
+            </div> -->
+
+            
+        </div>
     </div>
 
 <!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    WORKERS TAB-->
@@ -51,7 +70,7 @@
                 <button class='workers-tab-close'>X</button>
             </div>
             <div class='workers-tab-content'>
-
+               
                 <form>
                     <input  type="text" id="name" placeholder="Imię">
                     <input  type="text" id="surname" placeholder="Nazwisko">
@@ -76,8 +95,13 @@
         </div>
 
 
-    </div>
+  
         
+
+
+
+<!--oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo    END-->
+</div>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
         <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>

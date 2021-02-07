@@ -79,3 +79,29 @@
   border: 1px solid white;
   font-weight: 700;
 }
+
+.work-shedule {
+  position: absolute;
+  left: 200px;
+  top: 200px;
+  height: 620px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.row-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.cell {
+  display: block;
+  width: 30px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  background-color: yellow;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
