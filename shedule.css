@@ -66,6 +66,44 @@
   box-sizing: border-box;
 }
 
+.workersAmount {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 30px;
+  background-color: cadetblue;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.legend {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 200px;
+  height: 170px;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.legend > p {
+  display: block;
+  height: 30px;
+  line-height: 0;
+  margin: 10px;
+  font-weight: 700;
+}
+
+.workersAmount-p {
+  margin-left: 10px;
+}
+
 .workers-shedule-worker {
   width: 100%;
   height: 30px;
@@ -96,12 +134,14 @@
 }
 
 .cell {
-  display: block;
+  display: flex;
   width: 30px;
   height: 20px;
   line-height: 20px;
   margin: 0;
-  background-color: yellow;
+  background-color: #bbb;
   box-sizing: border-box;
   border: 1px solid black;
+  justify-content: center;
+  font-weight: 700;
 }

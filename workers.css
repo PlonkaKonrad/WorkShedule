@@ -10,12 +10,14 @@
   overflow: hidden;
   background-color: #fff;
   z-index: 100;
+  display: none;
 }
 
 .workers-tab-active {
   position: absolute;
   left: 50%;
   top: 50%;
+  display: flex;
 }
 
 .workers-tab-close {
@@ -100,20 +102,4 @@
 
 .worker-position > button {
   background-color: crimson;
-}
-
-.workersAmount {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 200px;
-  height: 30px;
-  background-color: cadetblue;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-.workersAmount-p {
-  margin-left: 10px;
 }

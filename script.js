@@ -1,5 +1,9 @@
 
 
+// dodac opcje jesli kliknie się komutrkę to jej zawratośc zmieni się I, II, W, itd
+
+
+
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DATE DISPLAY
 
 
@@ -168,19 +172,6 @@ function CreatePDFfromHTML() {
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORK SHEDULE
 
 
-// <!-- row container musi być szeroki na szerokość pracowników i do niego appendować divy cell(ilość pracowników)
-//                 i tak dla każdego dnia. musi być pętla w pętli gdzie pierwsza dodaje row conatiner dla każdego dnia a pętyla wewnątrz
-//                 niej rysuje tyle divów cell ile jest pracowników
-            
-//             -->
-//             <div class="row-container">
-//                 <div class='cell'></div>
-//             </div>
-//             <div class="row-container">
-//                 <div class='cell'></div>
-//             </div>
-
-
 function displayCells(monthLength){
 
 
@@ -188,27 +179,84 @@ function displayCells(monthLength){
 
     for(let i = 0; i < monthLength; i++){
         
-        $('.work-shedule').append("<div id='n"+i+"' class='row-container'></div>");
+        $('.work-shedule').append("<div id='r"+i+"' class='row-container'></div>");
 
-        let id = '#n' + i ;
+        let idRow = '#r' + i ;
 
           
-//console.log(id);
-//console.log(workersArray.length);
 
 
          for(let j = 0; j < workersArray.length; j++){
-         $(id).append("<div class='cell'></div>");
+
+         let iString = i.toString();
+         let jString = j.toString();
+         let id ="id"+ iString+jString;
+
+
+        //  console.log('i'+iString);
+        //  console.log('j'+jString);
+        console.log(id);
+
+         $(idRow).append("<div id='"+id+"'onClick='cellChange("+id+")' class='cell'></div>");
 
          
         
 
          }
-     }
-
-       
-       
-                   
+     }              
 }
+
+
+
+
+function cellChange(id) {
+     
+    let shifts = ['','I',"II","III","W","L4","U"]
+    
+    
+   
+    let shift = $(id).html();
+    if (shift == '') {
+        $(id).html(shifts[1])
+        $(id).css("backgroundColor", "yellow");
+        $(id).css("color", "black");
+
+    }else if (shift == 'I' ){
+        $(id).html(shifts[2])
+        $(id).css("backgroundColor", "yellow");
+        $(id).css("color", "black");
+
+    }else if (shift == 'II' ){
+        $(id).html(shifts[3]);
+        $(id).css("backgroundColor", "yellow");
+        $(id).css("color", "black");
+
+    }else if (shift == 'III' ){
+        $(id).html(shifts[4]);
+        $(id).css("backgroundColor", "slateblue");
+        $(id).css("color", "white");
+
+    }else if (shift == 'W' ){
+        $(id).html(shifts[5]);
+        $(id).css("backgroundColor", "black");
+        $(id).css("color", "white");
+
+    }else if (shift == 'L4' ){
+        $(id).html(shifts[6]);
+        $(id).css("backgroundColor", "green");
+        $(id).css("color", "white");
+
+    }else (
+        $(id).html(shifts[0]),
+        $(id).css("backgroundColor", "#bbb")
+    );
+
+  
+
+    
+}
+
+
+
 
 
