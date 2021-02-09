@@ -1,10 +1,6 @@
 
 
-// dodac opcje jesli kliknie się komutrkę to jej zawratośc zmieni się I, II, W, itd
-
-
-
-// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DATE DISPLAY
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo DATE DISPLAY /GENERATE CELLS
 
 
  $('#date-btn').click(() =>{
@@ -31,8 +27,6 @@
     for(let i = 1 ; i  < monthLength +1 ; i++){
         $('.date').append("<div class='date-disp'>"+ i +'-'+month+'-'+ year +"</div>");
 
-
-
         $('.day').append("<div class='day-disp'>" +days[day] +"</div>");
         
          day++;
@@ -47,28 +41,17 @@
  })
 
 
-
-
-
 // ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORKERS TAB
 
 $('.workers-btn').click(() => {
 
 
         let workerTab = $('.workers-tab');
-        let dayTab = $('.dayOff-tab').hasClass('dayOff-tab-active');
+    
+        workerTab.toggleClass("workers-tab-active");
+        $('.blackOut').toggleClass('blackout-active');
+
         
-
-
-
-        if (dayTab == true) {
-            $('.dayOff-tab').toggleClass("dayOff-tab-active");
-            workerTab.toggleClass("workers-tab-active");
-
-        } else {
-            workerTab.toggleClass("workers-tab-active");
-            $('.blackOut').toggleClass('blackout-active');
-        }
     });
 
 
@@ -101,7 +84,7 @@ function displayWorker() {
         let bgcolor = workersArray[i][4];
         let colorString="style='background-color:"+ bgcolor +";'";
 
-        $('.workers-shedule').append("<div "+colorString+" class='workers-shedule-worker'>"+workerName+' '+workerSurname+"</div>");
+        $('.workers-shedule').append("<div "+colorString+" class='workers-shedule-worker'>"+workerName+'  '+workerSurname+"</div>");
 
     
     }
@@ -127,7 +110,7 @@ function addWorker(worker){
     let colorString = "style='background-color:"+ color +";'";
 
 
-    $('.worker-list').append("<div "+colorString+" class='worker-position'><div>"+name+"</div><div>"+surname+"</div><div>"+role+"</div><div>"+addInfo+"</div><button>Usuń</button></div>");
+    $('.worker-list').append("<div "+colorString+" class='worker-position'><div>"+name+"</div><div>"+surname+"</div><div>"+role+"</div><div>"+addInfo+"</div></div>");
 
 
 
@@ -167,9 +150,7 @@ function CreatePDFfromHTML() {
 }
   
 
-
-
-// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORK SHEDULE
+// ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo WORK SHEDULE / CHANGE CELLS
 
 
 function displayCells(monthLength){
@@ -205,8 +186,6 @@ function displayCells(monthLength){
          }
      }              
 }
-
-
 
 
 function cellChange(id) {
